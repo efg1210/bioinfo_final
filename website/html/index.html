@@ -6,6 +6,22 @@
         <script rel="text" src="../js/js.js"></script>
     </head>
     <body>
+        <h1>ORF Reader</h1>
+        <p>Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
 
+        <form onsubmit="submit1(event)">
+            <textarea type="text" name="message" id="input-box" class="box" style="resize: none;" onchange="reset1()"></textarea>
+            <br/>
+            <input type="submit" value="Encoder/Decoder" id="submit">
+        </form>
+        <h3>Reading Frame 1</h2>
+        <textarea id="result1" style="resize: none;" class="box" readonly></textarea>
+        <h3>Reading Frame 2</h2>
+        <textarea id="result2" style="resize: none;" class="box" readonly></textarea>
+        <h3>Reading Frame 3</h2>
+        <textarea id="result3" style="resize: none;" class="box" readonly></textarea>
+        <div id="footer">
+            <p style="text-align: center;">&copy;May 27th 2020, UCVTS, AIT, Bioinformatics<br/>Emily, Michael, and Harshita</p>
+        </div>
     </body>
 </html>
