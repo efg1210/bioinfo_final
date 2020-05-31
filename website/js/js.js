@@ -4,9 +4,9 @@ function submit1(e) {
     let bases = String(e.target.message.value).toUpperCase();
     //console.log("bases: " + bases);
     let transcribedBases = transcribe(bases);
-    console.log(transcribedBases);
+    //console.log(transcribedBases);
     let frames = ["", "", ""];
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 3; i++) {
         frames[i] = translate(transcribedBases.slice(i));
     }
     console.log(frames);
@@ -124,14 +124,10 @@ function translate(bases) {
 function transcribe(template) {
     let result = "";
     for (let i = 0; i < template.length; i++) {
-        if (template.charAt(i) == "A") {
-            result += "A";
-        } else if (template.charAt(i) == "T") {
+        if (template.charAt(i) == "T") {
             result += "U";
-        } else if (template.charAt(i) == "C") {
-            result += "C";
-        } else if (template.charAt(i) == "G") {
-            result += "G";
+        } else {
+            result += template.charAt(i);
         }
     }
     return result;
