@@ -10,3 +10,8 @@
     bottom: 0;
     height: 70px;
 }
+
+.box {
+    text-align: left;
+    width: 75%;
+}
