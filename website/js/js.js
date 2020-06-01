@@ -9,10 +9,11 @@ function submit1(e) {
     for (let i = 0; i < 3; i++) {
         frames[i] = translate(transcribedBases.slice(i));
     }
-    console.log(frames);
-    document.getElementById("result1").value = frames[0];
-    document.getElementById("result2").value = frames[1];
-    document.getElementById("result3").value = frames[2];
+    //console.log(frames);
+    console.log(pretty(frames[0]));
+    document.getElementById("result1").innerHTML = pretty(frames[0]);
+    document.getElementById("result2").innerHTML = pretty(frames[1]);
+    document.getElementById("result3").innerHTML = pretty(frames[2]);
 }
 
 function translate(bases) {
@@ -21,7 +22,7 @@ function translate(bases) {
     let counter = 0;
     while (counter < bases.length) {
         let codon = bases.slice(counter, (counter + 3));
-        console.log("codon:" + codon);
+        //console.log("codon:" + codon);
         switch(codon) {
             case "AUG":
                 acids.push("M"); break;
@@ -121,12 +122,27 @@ function translate(bases) {
     return answer;
 }
 
+function pretty(polyPep) {
+    let result = "<p>";
+    for (let i = 0; i < polyPep.length; i++) {
+        if (polyPep.charAt(i) == "M") {
+            result += "<marked class='green'>M</marked>";
+        } else if (polyPep.charAt(i) == "*") {
+            result += "<marked class='red'>*</marked>";
+        } else {
+            result += polyPep.charAt(i);
+        }
+    }
+    result += "</p>";
+    return result;
+}
+
 function transcribe(template) {
     let result = "";
     for (let i = 0; i < template.length; i++) {
         if (template.charAt(i) == "T") {
             result += "U";
-        } else {
+        } else if (template.charAt(i) != " ") {
             result += template.charAt(i);
         }
     }
