@@ -10,10 +10,45 @@ function submit1(e) {
         frames[i] = translate(transcribedBases.slice(i));
     }
     //console.log(frames);
-    console.log(pretty(frames[0]));
+    //console.log(pretty(frames[0]));
+    let longestStrandVar = longestStrand(frames);
     document.getElementById("result1").innerHTML = pretty(frames[0]);
     document.getElementById("result2").innerHTML = pretty(frames[1]);
     document.getElementById("result3").innerHTML = pretty(frames[2]);
+}
+
+function longestStrand(frames) {
+    console.log(frames[0]);
+    console.log(frames[1]);
+    console.log(frames[2]);
+    return "";
+}
+
+function pretty(polyPep) {
+    let result = "<p>";
+    for (let i = 0; i < polyPep.length; i++) {
+        if (polyPep.charAt(i) == "M") {
+            result += "<marked class='green'>M</marked>";
+        } else if (polyPep.charAt(i) == "*") {
+            result += "<marked class='red'>*</marked>";
+        } else {
+            result += polyPep.charAt(i);
+        }
+    }
+    result += "</p>";
+    return result;
+}
+
+function transcribe(template) {
+    let result = "";
+    for (let i = 0; i < template.length; i++) {
+        if (template.charAt(i) == "T") {
+            result += "U";
+        } else if (template.charAt(i) != " ") {
+            result += template.charAt(i);
+        }
+    }
+    return result;
 }
 
 function translate(bases) {
@@ -120,33 +155,6 @@ function translate(bases) {
         answer += acids[i];
     }
     return answer;
-}
-
-function pretty(polyPep) {
-    let result = "<p>";
-    for (let i = 0; i < polyPep.length; i++) {
-        if (polyPep.charAt(i) == "M") {
-            result += "<marked class='green'>M</marked>";
-        } else if (polyPep.charAt(i) == "*") {
-            result += "<marked class='red'>*</marked>";
-        } else {
-            result += polyPep.charAt(i);
-        }
-    }
-    result += "</p>";
-    return result;
-}
-
-function transcribe(template) {
-    let result = "";
-    for (let i = 0; i < template.length; i++) {
-        if (template.charAt(i) == "T") {
-            result += "U";
-        } else if (template.charAt(i) != " ") {
-            result += template.charAt(i);
-        }
-    }
-    return result;
 }
 
 function reset1(){

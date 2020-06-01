@@ -6,23 +6,24 @@
         <script rel="text" src="../js/js.js"></script>
     </head>
     <body>
-        <h1>ORF Reader</h1>
-        <p>Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
+        <div id="pre-footer">
+            <h1>ORF Reader</h1>
+            <p>Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
 
-        <form onsubmit="submit1(event)">
-            <textarea type="text" name="message" id="input-box" class="box" style="resize: none;" onchange="reset1()"></textarea>
-            <br/>
-            <input type="submit" value="Translate" id="submit">
-        </form>
-        <div id="container"></div>
-            <h3>Reading Frame 1</h2>
-            <div id="result1" style="resize: none;" class="answer" readonly></div>
-            <h3>Reading Frame 2</h2>
-            <div id="result2" style="resize: none;" class="answer" readonly></div>
-            <h3>Reading Frame 3</h2>
-            <div id="result3" style="resize: none;" class="answer" readonly></div>
+            <form onsubmit="submit1(event)">
+                <textarea type="text" name="message" id="input-box" class="box" style="resize: none;" onchange="reset1()"></textarea>
+                <br/>
+                <input type="submit" value="Translate" id="submit">
+            </form>
+            <div id="container"></div>
+                <h3>Reading Frame 1</h2>
+                <div id="result1" style="resize: none;" class="answer" readonly></div>
+                <h3>Reading Frame 2</h2>
+                <div id="result2" style="resize: none;" class="answer" readonly></div>
+                <h3>Reading Frame 3</h2>
+                <div id="result3" style="resize: none;" class="answer" readonly></div>
+            </div>
         </div>
-        <div id="pre-footer" height="70px"><br></div>
         <div id="footer">
             <p style="text-align: center;">&copy;May 27th 2020, UCVTS, AIT, Bioinformatics<br/>Emily, Michael, and Harshita</p>
         </div>

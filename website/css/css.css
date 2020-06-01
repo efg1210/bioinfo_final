@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 70px;
+    height: 10vh;
 }
 
 #input-box {
@@ -38,4 +38,10 @@
 
 .red {
     color: red;
+}
+
+#pre-footer {
+    overflow: scroll;
+    padding-bottom: 10vh;
+    height: 90vh;
 }
