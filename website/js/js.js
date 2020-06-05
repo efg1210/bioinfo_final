@@ -18,9 +18,39 @@ function submit1(e) {
 }
 
 function longestStrand(frames) {
-    console.log(frames[0]);
-    console.log(frames[1]);
-    console.log(frames[2]);
+    let frame = 0;
+    let longStart = 0;
+    let longEnd = 0;
+    let longest = 0;
+
+    let currentStart = 0;
+    let currentCount = 0;
+    let foundStart = false;
+    for (let i = 0; i < frames.length; i++) {
+        let string = frames[i];
+        console.log(string);
+        for (let j = 0; j < string.length; j++) {
+            if (string.charAt(j) == "M" && !foundStart) {
+                foundStart = true;
+                currentCount = 0;
+            }
+            if (foundStart) {
+                currentCount++;
+            }
+            if (string.charAt(j) == "*" && foundStart) {
+                if (currentCount < longest) {
+                    longest = currentCount;
+                    longStart = currentStart;
+                    longEnd = j;
+                    frame = i;
+                }
+                currentStart = 0;
+                currentCount = 0;
+                foundStart = false;
+            }
+        }
+    }
+    console.log(frames[frame].slice(longStart, longEnd+1));
     return "";
 }
 
