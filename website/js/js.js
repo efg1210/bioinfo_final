@@ -26,14 +26,14 @@ function longestStrand(frames) {
         if (frames[0].charAt(index) == "M") {
             total += "M";
             let num = index + 1;
-            while (frames[0].charAt(index) != "*") {
-                total += frames[0].charAt(index);
+            while (frames[0].charAt(num) != "*") {
+                total += frames[0].charAt(num);
                 num ++;
             }
             total += "*";
             index += num;
         }
-        if (longest < total) {
+        if (longest.length < total.length) {
             longest = total;
         }
         index++;
