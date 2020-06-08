@@ -15,35 +15,55 @@ function submit1(e) {
     document.getElementById("result1").innerHTML = pretty(frames[0]);
     document.getElementById("result2").innerHTML = pretty(frames[1]);
     document.getElementById("result3").innerHTML = pretty(frames[2]);
+    document.getElementById("result4").innerHTML = pretty(longestStrandVar);
+
 }
 
 function longestStrand(frames) {
     
     let longest = "";
-    let index = 0;
-    while (index < frames[0].length) {
-        let total = "";
-        if (frames[0].charAt(index) == "M") {
-            total += "M";
-            let num = index + 1;
-            while (frames[0].charAt(num) != "*") {
-                total += frames[0].charAt(num);
-                num ++;
+    let readingFrame = 0;
+
+    for (let index = 0; index < frames.length; index++) {
+        let currentStrand = "";
+        for (let i = 0; i < frames[index].length; i++) {
+            let currentChar = frames[index].charAt(i);
+            
+            if (!currentStrand.includes("M") && currentChar == "M") {
+                currentStrand = "M";
+            } else if (currentChar == "*") {
+                currentStrand += currentChar;
+                if (currentStrand.length > longest.length) {
+                    longest = currentStrand;
+                    readingFrame = index + 1;
+                }
+                currentStrand = "";
+            } else {
+                currentStrand += currentChar;
             }
-            total += "*";
-            index += num;
+
+            if (i + 1 == frames[index].length && currentStrand.length > longest.length) {
+                longest = currentStrand;
+                readingFrame = index + 1;
+            }
         }
-        if (longest.length < total.length) {
-            longest = total;
-        }
-        index++;
     }
-    console.log(longest);
-    return "";
+
+    longest = longest + " (Frame " + readingFrame.toString() + ")";
+    return longest;
 }
 
 function pretty(polyPep) {
+    
     let result = "<p>";
+
+    let frame = "";
+    if (polyPep.includes(" (F")) {
+        let split = polyPep.split(" ");
+        polyPep = split[0];
+        frame = split[1] + " " + split[2];
+    }
+
     for (let i = 0; i < polyPep.length; i++) {
         if (polyPep.charAt(i) == "M") {
             result += "<marked class='green'>M</marked>";
@@ -53,6 +73,11 @@ function pretty(polyPep) {
             result += polyPep.charAt(i);
         }
     }
+
+    if (frame != "") {
+        result += " " + frame;
+    }
+
     result += "</p>";
     return result;
 }
