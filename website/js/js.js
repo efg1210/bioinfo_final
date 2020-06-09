@@ -2,6 +2,9 @@
 function submit1(e) {
     e.preventDefault();
     let bases = String(e.target.message.value).toUpperCase();
+    //this sees if it is backwards or not
+    let backwards = document.getElementById("myCheck").checked;
+    console.log(backwards);
     //console.log("bases: " + bases);
     let transcribedBases = transcribe(bases);
     //console.log(transcribedBases);
@@ -54,9 +57,7 @@ function longestStrand(frames) {
 }
 
 function pretty(polyPep) {
-    
     let result = "<p>";
-
     let frame = "";
     if (polyPep.includes(" (F")) {
         let split = polyPep.split(" ");
@@ -80,6 +81,16 @@ function pretty(polyPep) {
 
     result += "</p>";
     return result;
+}
+
+function warning() {
+    let checkBox = document.getElementById("myCheck");
+    let text = document.getElementById("warning");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+        text.style.display = "none";
+    }
 }
 
 function transcribe(template) {
