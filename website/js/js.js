@@ -49,7 +49,7 @@ function longestStrand(frames) {
         }
     }
 
-    longest = longest + " (Frame " + readingFrame.toString() + ")";
+    longest = longest + "<br> <b>(Frame " + readingFrame.toString() + ")<b>";
     return longest;
 }
 
