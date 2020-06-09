@@ -38,7 +38,8 @@ textarea {
 }
 
 .green {
-    color: green;
+    color: #00cc00;
+    font-weight: bold;
 }
 
 .red {
