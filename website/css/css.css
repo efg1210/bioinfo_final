@@ -49,9 +49,9 @@ textarea {
     overflow: scroll;
     overflow-x: hidden;
     height: 85vh;
-    background-color: #d98cd9;
 }
 
 body {
+    background-color: #d98cd9;
     overflow: hidden;
 }
