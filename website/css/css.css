@@ -1,12 +1,57 @@
 * {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+    font-size: 1em;
+    background-color: white
 }
 
 #footer {
-    /*background-color: #42dff4;*/
+    background-color: white;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 70px;
+    height: 10vh;
+}
+
+#input-box {
+    text-align: left;
+    width: 75%;
+}
+
+#container {
+    text-align: center;
+}
+
+.answer {
+    word-wrap: break-word;
+    display: inline-block;
+    text-align: left;
+    width: 75%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+#pre-footer {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 85vh;
+}
+
+body {
+    background-color: #d98cd9;
+    overflow: hidden;
 }
