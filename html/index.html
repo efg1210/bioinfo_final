@@ -14,19 +14,19 @@
             <form onsubmit="submit1(event)">
                 <textarea type="text" name="message" id="input-box" class="box" style="resize: none;" onchange="reset1()"></textarea>
                 <br/>
-                <INPUT type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()">Backwards<br>
-                <input type="submit" value="Translate" id="submit">
+                <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()"/>Backwards<br>
+                <input type="submit" value="Translate" id="submit"/>
             </form>
             <p id="warning" style="display:none">The ORF Reader will read the bases starting at the end, and Frame 1 is actually Frame -1 etc</p>
             <div id="container"></div>
                 <h3>Reading Frame 1</h2>
-                <div id="result1" style="resize: none;" class="answer" readonly>&nbsp</div>
+                <div id="result1" class="answer" readonly>&nbsp</div>
                 <h3>Reading Frame 2</h2>
-                <div id="result2" style="resize: none;" class="answer" readonly>&nbsp</div>
+                <div id="result2" class="answer" readonly>&nbsp</div>
                 <h3>Reading Frame 3</h2>
-                <div id="result3" style="resize: none;" class="answer" readonly>&nbsp</div>
+                <div id="result3" class="answer" readonly>&nbsp</div>
                 <h3>Longest Protein Sequence</h3>
-                <div id="result4" style="resize: none;" class="answer" readonly>&nbsp</div>
+                <div id="result4" class="answer" readonly>&nbsp</div>
             </div>
         </div>
         <div id="footer">

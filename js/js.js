@@ -1,4 +1,3 @@
-
 function submit1(e) {
     e.preventDefault();
     let bases = String(e.target.message.value).toUpperCase();
@@ -19,7 +18,6 @@ function submit1(e) {
     document.getElementById("result2").innerHTML = pretty(frames[1]);
     document.getElementById("result3").innerHTML = pretty(frames[2]);
     document.getElementById("result4").innerHTML = pretty(longestStrandVar);
-
 }
 
 function longestStrand(frames) {
@@ -213,4 +211,4 @@ function translate(bases) {
 
 function reset1(){
     document.getElementsByClassName("answer").value = "";
-  }
+}
