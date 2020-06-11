@@ -45,7 +45,7 @@ function longestStrand(frames) {
                 currentStrand += currentChar;
             }
 
-            if (i + 1 == frames[index].length && currentStrand.length > longest.length) {
+            if (i + 1 == frames[index].length && currentStrand.length > longest.length && currentStrand.includes("M")) {
                 longest = currentStrand;
                 readingFrame = index + 1;
             }
