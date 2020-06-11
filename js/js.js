@@ -51,6 +51,9 @@ function longestStrand(frames) {
                 if (currentStrand.length > longest.length && currentStrand.includes("M")) {
                     longest = currentStrand;
                     readingFrame = index + 1;
+                } else if (currentStrand.length > longest.length && currentStrand.length == i+1) {
+                    longest = currentStrand;
+                    readingFrame = index + 1;
                 }
                 currentStrand = "";
             } else {
