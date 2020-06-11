@@ -33,9 +33,7 @@ textarea {
     display: inline-block;
     text-align: left;
     width: 75%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
+    border: solid 1px black;
     background-color: white;
     resize: none;
 }
@@ -57,10 +55,6 @@ textarea {
     /* height: 100vh; */
     
     margin-top: 70px;
-}
-
-#longest {
-    margin-bottom: 30px;
 }
 
 #pref-cont {
@@ -106,6 +100,7 @@ button {
 button:hover {
     background-color: grey;
     color: white;
+    border: solid white;
     
 }
 
@@ -134,7 +129,7 @@ div.header {
 
 .readingframe {
     display: inline-block;
-    width: 20vw;
+    width: 30vw;
     /* background-color: rgba(100, 100, 100, 0.3);
     background-color: var(--green);
     padding-bottom: 50px; */
@@ -143,6 +138,7 @@ div.header {
 #longest {
     display: inline-block;
     width: 60vw;
+    margin-bottom: 30px;
 }
 
 span.footer {
