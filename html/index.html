@@ -8,29 +8,44 @@
     </head>
     <body>
         <div id="pre-footer">
-            <h1>ORF Reader</h1>
-            <p>Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
+            <!-- <div id="pref-cont"> -->
+            <div class="header">
+                <h1 class="header">O R F &nbsp;R e a d e r</h1>
+            </div>
+            <p style="margin-top: 10px">Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
 
             <form onsubmit="submit1(event)">
                 <textarea type="text" name="message" id="input-box" class="box" style="resize: none;" onchange="reset1()"></textarea>
                 <br/>
-                <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()"/>Backwards<br>
-                <input type="submit" value="Translate" id="submit"/>
+                <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()"/>&nbsp;Backwards<br>
+                <!-- <input type="submit" value="Translate" id="submit"/>   bad emily --> 
+                <button id="submit">Translate</button>
             </form>
             <p id="warning" style="display:none">The ORF Reader will read the bases starting at the end, and Frame 1 is actually Frame -1 etc</p>
             <div id="container"></div>
-                <h3>Reading Frame 1</h2>
-                <div id="result1" class="answer" readonly>&nbsp</div>
-                <h3>Reading Frame 2</h2>
-                <div id="result2" class="answer" readonly>&nbsp</div>
-                <h3>Reading Frame 3</h2>
-                <div id="result3" class="answer" readonly>&nbsp</div>
-                <h3>Longest Protein Sequence</h3>
-                <div id="result4" class="answer" readonly>&nbsp</div>
+                <center>
+                    <div class="readingframe">
+                        <h2 style="color: var(--green)">Reading Frame 1</h2>
+                        <div id="result1" class="answer" readonly>&nbsp;</div>
+                    </div>
+                    <div class="readingframe">
+                        <h2 style="color: var(--pale)">Reading Frame 2</h2>
+                        <div id="result2" class="answer" readonly>&nbsp;</div>
+                    </div>
+                    <div class="readingframe">
+                        <h2 style="color: var(--green)">Reading Frame 3</h2>
+                        <div id="result3" class="answer" readonly>&nbsp;</div>
+                    </div>
+                    <div id="longest">
+                        <h2>Longest Protein Sequence</h2>
+                        <div id="result4" class="answer" readonly>&nbsp;</div>
+                    </div>
+                </center>
             </div>
+            <!-- </div> -->
         </div>
-        <div id="footer">
-            <p style="text-align: center;">May 27th 2020, UCVTS, AIT, Bioinformatics<br/>Emily, Michael, and Harshita</p>
+        <div class="footer">
+            <span class="footer">&copy; 27 May 2020. UCVTS. AIT. Bioinformatics. Emily & Michael & Harshita</span>
         </div>
     </body>
 </html>

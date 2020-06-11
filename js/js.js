@@ -17,10 +17,13 @@ function submit1(e) {
     }
     //console.log(frames);
     //console.log(pretty(frames[0]));
+    let one = pretty(frames[0]);
+    let two = pretty(frames[1]);
+    let three = pretty(frames[2]);
     let longestStrandVar = longestStrand(frames);
-    document.getElementById("result1").innerHTML = pretty(frames[0]);
-    document.getElementById("result2").innerHTML = pretty(frames[1]);
-    document.getElementById("result3").innerHTML = pretty(frames[2]);
+    document.getElementById("result1").innerHTML = one;
+    document.getElementById("result2").innerHTML = two;
+    document.getElementById("result3").innerHTML = three;
     document.getElementById("result4").innerHTML = pretty(longestStrandVar);
 }
 
@@ -60,7 +63,7 @@ function longestStrand(frames) {
             }
         }
     }
-
+    if (longest.length == 0) return "";
     longest = longest + "<br> <b>(Frame " + readingFrame.toString() + ")<b>";
     return longest;
 }
