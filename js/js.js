@@ -1,10 +1,14 @@
 function submit1(e) {
     e.preventDefault();
     let bases = String(e.target.message.value).toUpperCase();
+    // console.log("bases: " + bases);
     //this sees if it is backwards or not
     let backwards = document.getElementById("myCheck").checked;
-    console.log(backwards);
-    //console.log("bases: " + bases);
+    // console.log(backwards);
+    if (backwards) {
+        bases = backwardize(bases);
+        // console.log("bases backwardized: " + bases);
+    }
     let transcribedBases = transcribe(bases);
     //console.log(transcribedBases);
     let frames = ["", "", ""];
@@ -18,6 +22,13 @@ function submit1(e) {
     document.getElementById("result2").innerHTML = pretty(frames[1]);
     document.getElementById("result3").innerHTML = pretty(frames[2]);
     document.getElementById("result4").innerHTML = pretty(longestStrandVar);
+}
+
+function backwardize(bases) {
+    let output = "";
+    for (let i = bases.length - 1; i >= 0; i--) {
+        output += bases.charAt(i);
+    } return output;
 }
 
 function longestStrand(frames) {
