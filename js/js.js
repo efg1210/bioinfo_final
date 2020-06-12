@@ -1,22 +1,15 @@
 function submit1(e) {
     e.preventDefault();
     let bases = String(e.target.message.value).toUpperCase();
-    // console.log("bases: " + bases);
-    //this sees if it is backwards or not
     let backwards = document.getElementById("myCheck").checked;
-    // console.log(backwards);
     if (backwards) {
         bases = backwardize(bases);
-        // console.log("bases backwardized: " + bases);
     }
     let transcribedBases = transcribe(bases);
-    //console.log(transcribedBases);
     let frames = ["", "", ""];
     for (let i = 0; i < 3; i++) {
         frames[i] = translate(transcribedBases.slice(i));
     }
-    //console.log(frames);
-    //console.log(pretty(frames[0]));
     let one = pretty(frames[0]);
     let two = pretty(frames[1]);
     let three = pretty(frames[2]);
@@ -132,7 +125,6 @@ function translate(bases) {
     let counter = 0;
     while (counter < bases.length) {
         let codon = bases.slice(counter, (counter + 3));
-        //console.log("codon:" + codon);
         switch(codon) {
             case "AUG":
                 acids.push("M"); break;

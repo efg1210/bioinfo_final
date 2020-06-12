@@ -57,35 +57,20 @@ textarea {
     overflow: auto;
     overflow-x: scroll;
     height: calc(100vh - 10px - 70px);
-    /* position: relative;  */
-    /* height: 100vh; */
-    
     margin-top: 70px;
-}
-
-#pref-cont {
-    /* margin-top: calc((100vh - 50px - 70px) / 3); */
-    /* margin: 0px; */
-    /* position: absolute; */
 }
 
 body {
     overflow: hidden;
-    /* background-color: rgba(129, 0, 129, 0.3);
-    background-color: var(--grey);
-    background-color: rgba(164, 164, 165, 0.5); */
 }
 
 textarea, .answer {
     border: solid 1px black;
-    /* background-color: rgb(128, 128, 128);
-    color: white; */
 }
 
 h1 {
     text-transform: uppercase;
     font-weight: 500;
-    /* color: var(--purple); */
 }
 
 h2 {
@@ -122,7 +107,6 @@ div.footer {
     color: white;
     background-color: var(--purple);
     width: 100%;
-    /* font-family: sans-serif; */
     font-size: 13px;
     text-align: right;
     height: 20px;
@@ -141,9 +125,6 @@ div.header {
 .readingframe {
     display: inline-block;
     width: 30vw;
-    /* background-color: rgba(100, 100, 100, 0.3);
-    background-color: var(--green);
-    padding-bottom: 50px; */
 }
 
 #longest {
