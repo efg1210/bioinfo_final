@@ -156,3 +156,9 @@ span.footer {
     --green: rgb(60, 165, 66);
     --pale: rgb(167, 211, 119);
 }
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
