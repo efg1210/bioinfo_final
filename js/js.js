@@ -98,13 +98,19 @@ function pretty(polyPep) {
     return result;
 }
 
-function warning() {
+function checkAction() {
     let checkBox = document.getElementById("myCheck");
     let text = document.getElementById("warning");
     if (checkBox.checked == true){
         text.style.display = "block";
+        document.getElementById("rf1").textContent = "Reading Frame -1";
+        document.getElementById("rf2").textContent = "Reading Frame -2";
+        document.getElementById("rf3").textContent = "Reading Frame -3";
     } else {
         text.style.display = "none";
+        document.getElementById("rf1").textContent = "Reading Frame 1";
+        document.getElementById("rf2").textContent = "Reading Frame 2";
+        document.getElementById("rf3").textContent = "Reading Frame 3";
     }
 }
 

@@ -17,7 +17,7 @@
                 <form onsubmit="submit1(event)">
                     <textarea type="text" name="message" id="input-box" class="box" style="resize: vertical;" onchange="reset1()"></textarea>
                     <br/>
-                    <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()"/>&nbsp;<span id="check">Backwards</span><br>
+                    <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="checkAction()"/>&nbsp;<span id="check">Backwards</span><br>
                     <!-- <input type="submit" value="Translate" id="submit"/>   bad emily --> 
                     <button id="submit">Translate</button>
                 </form>
@@ -25,15 +25,15 @@
                 <div id="container"></div>
                     <center><div class="horizontal">
                         <div class="readingframe">
-                            <h2 style="color: var(--green)">Reading Frame 1</h2>
+                            <h2 style="color: var(--green)" id="rf1">Reading Frame 1</h2>
                             <div id="result1" class="answer" readonly>&nbsp;</div>
                         </div>
                         <div class="readingframe" style="margin: 0 1.5vw 0 1.5vw;">
-                            <h2 style="color: var(--pale)">Reading Frame 2</h2>
+                            <h2 style="color: var(--pale)" id="rf2">Reading Frame 2</h2>
                             <div id="result2" class="answer" readonly>&nbsp;</div>
                         </div>
                         <div class="readingframe">
-                            <h2 style="color: var(--green)">Reading Frame 3</h2>
+                            <h2 style="color: var(--green)" id="rf3">Reading Frame 3</h2>
                             <div id="result3" class="answer" readonly>&nbsp;</div>
                         </div>
                     </div></center>
