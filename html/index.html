@@ -23,20 +23,22 @@
                 </form>
                 <p id="warning" style="display:none">The ORF Reader will read the bases starting at the end, and Frame 1 is actually Frame -1 etc</p>
                 <div id="container"></div>
-                    <center><div class="horizontal">
-                        <div class="readingframe">
-                            <h2 style="color: var(--green)" id="rf1">Reading Frame 1</h2>
-                            <div id="result1" class="answer" readonly>&nbsp;</div>
+                    <center>
+                        <div class="horizontal">
+                            <div class="readingframe">
+                                <h2 style="color: var(--green)" id="rf1">Reading Frame 1</h2>
+                                <div id="result1" class="answer" readonly>&nbsp;</div>
+                            </div>
+                            <div class="readingframe" style="margin: 0 1.5vw 0 1.5vw;">
+                                <h2 style="color: var(--pale)" id="rf2">Reading Frame 2</h2>
+                                <div id="result2" class="answer" readonly>&nbsp;</div>
+                            </div>
+                            <div class="readingframe">
+                                <h2 style="color: var(--green)" id="rf3">Reading Frame 3</h2>
+                                <div id="result3" class="answer" readonly>&nbsp;</div>
+                            </div>
                         </div>
-                        <div class="readingframe" style="margin: 0 1.5vw 0 1.5vw;">
-                            <h2 style="color: var(--pale)" id="rf2">Reading Frame 2</h2>
-                            <div id="result2" class="answer" readonly>&nbsp;</div>
-                        </div>
-                        <div class="readingframe">
-                            <h2 style="color: var(--green)" id="rf3">Reading Frame 3</h2>
-                            <div id="result3" class="answer" readonly>&nbsp;</div>
-                        </div>
-                    </div></center>
+                    </center>
                     <div id="longest">
                         <h2>Longest Protein Sequence</h2>
                         <div id="result4" class="answer" readonly>&nbsp;</div>

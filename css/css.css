@@ -34,7 +34,7 @@ textarea {
     word-wrap: break-word;
     display: inline-block;
     text-align: left;
-    width: 30vw;
+    width: 25vw;
     border: solid 1px black;
     background-color: white;
     resize: none;
@@ -168,7 +168,7 @@ span.footer {
 }
 
 .horizontal {
-    /* display: flex; */
+    display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */ /* no emily. but thanks for the above, that's good, you don't need this rest, and it's bad*/
+    justify-content: space-between;
 }
