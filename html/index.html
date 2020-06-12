@@ -8,41 +8,41 @@
     </head>
     <body>
         <div id="pre-footer">
-            <!-- <div id="pref-cont"> -->
-            <div class="header">
-                <h1 class="header">O R F &nbsp;R e a d e r</h1>
-            </div>
-            <p style="margin-top: 25px">Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
+            <center>
+                <div class="header">
+                    <h1 class="header">O R F &nbsp;R e a d e r</h1>
+                </div>
+                <p style="margin-top: 25px">Put the base squence in the textarea. On submission, it will display the possible reading frames.</p>
 
-            <form onsubmit="submit1(event)">
-                <textarea type="text" name="message" id="input-box" class="box" style="resize: vertical;" onchange="reset1()"></textarea>
-                <br/>
-                <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()"/>&nbsp;Backwards<br>
-                <!-- <input type="submit" value="Translate" id="submit"/>   bad emily --> 
-                <button id="submit">Translate</button>
-            </form>
-            <p id="warning" style="display:none">The ORF Reader will read the bases starting at the end, and Frame 1 is actually Frame -1 etc</p>
-            <div id="container"></div>
-                <div class="horizontal">
-                    <div class="readingframe">
-                        <h2 style="color: var(--green)">Reading Frame 1</h2>
-                        <div id="result1" class="answer" readonly>&nbsp;</div>
-                    </div>
-                    <div class="readingframe">
-                        <h2 style="color: var(--pale)">Reading Frame 2</h2>
-                        <div id="result2" class="answer" readonly>&nbsp;</div>
-                    </div>
-                    <div class="readingframe">
-                        <h2 style="color: var(--green)">Reading Frame 3</h2>
-                        <div id="result3" class="answer" readonly>&nbsp;</div>
+                <form onsubmit="submit1(event)">
+                    <textarea type="text" name="message" id="input-box" class="box" style="resize: vertical;" onchange="reset1()"></textarea>
+                    <br/>
+                    <input type="Checkbox" name="backwards" value="Backwards" id="myCheck" onclick="warning()"/>&nbsp;<span id="check">Backwards</span><br>
+                    <!-- <input type="submit" value="Translate" id="submit"/>   bad emily --> 
+                    <button id="submit">Translate</button>
+                </form>
+                <p id="warning" style="display:none">The ORF Reader will read the bases starting at the end, and Frame 1 is actually Frame -1 etc</p>
+                <div id="container"></div>
+                    <center><div class="horizontal">
+                        <div class="readingframe">
+                            <h2 style="color: var(--green)">Reading Frame 1</h2>
+                            <div id="result1" class="answer" readonly>&nbsp;</div>
+                        </div>
+                        <div class="readingframe" style="margin: 0 1.5vw 0 1.5vw;">
+                            <h2 style="color: var(--pale)">Reading Frame 2</h2>
+                            <div id="result2" class="answer" readonly>&nbsp;</div>
+                        </div>
+                        <div class="readingframe">
+                            <h2 style="color: var(--green)">Reading Frame 3</h2>
+                            <div id="result3" class="answer" readonly>&nbsp;</div>
+                        </div>
+                    </div></center>
+                    <div id="longest">
+                        <h2>Longest Protein Sequence</h2>
+                        <div id="result4" class="answer" readonly>&nbsp;</div>
                     </div>
                 </div>
-                <div id="longest">
-                    <h2>Longest Protein Sequence</h2>
-                    <div id="result4" class="answer" readonly>&nbsp;</div>
-                </div>
-            </div>
-            <!-- </div> -->
+            </center>
         </div>
         <div class="footer">
             <span class="footer">&copy; 16 June 2020. UCVTS. AIT. Bioinformatics. Emily & Michael & Harshita</span>

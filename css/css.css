@@ -7,7 +7,8 @@
 
 textarea {
     font-size: 1em;
-    background-color: white
+    background-color: white;
+    height: 25vh;
 }
 
 #footer {
@@ -21,7 +22,7 @@ textarea {
 
 #input-box {
     text-align: left;
-    width: 75%;
+    width: 94vw;
 }
 
 #container {
@@ -32,10 +33,14 @@ textarea {
     word-wrap: break-word;
     display: inline-block;
     text-align: left;
-    width: 75%;
+    width: 30vw;
     border: solid 1px black;
     background-color: white;
     resize: none;
+}
+
+#result4.answer {
+    width: 94vw;
 }
 
 .green {
@@ -90,11 +95,16 @@ input {
     margin: 15px 0 15px 0;
 }
 
+#check {
+    font-size: large;
+}
+
 button {
     background-color: white;
     padding: 7px 10px 5px 10px;
     border: solid black;
     transition-duration: 0.4s;
+    font-size: large;
 }
 
 button:hover {
@@ -137,7 +147,6 @@ div.header {
 
 #longest {
     display: inline-block;
-    width: 60vw;
     margin-bottom: 30px;
 }
 
@@ -158,7 +167,7 @@ span.footer {
 }
 
 .horizontal {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
-    justify-content: space-between;
-  }
+    /* justify-content: space-between; */ /* no emily. but thanks for the above, that's good, you don't need this rest, and it's bad*/
+}
